@@ -1,0 +1,20 @@
+version: '2.1'
+services:
+  pxe-server:
+    image: pxe-server:latest
+    ports:
+    - "67:67/udp"
+    - "68:68/udp"
+    - "69:69/udp"
+    - "4011:4011/udp"
+    - "21:21"
+    - "20:20"
+    - "67:67"
+    - "68:68"
+    - "33333-33343:33333-33343"
+    volumes:
+    - "/srv/pxe/netboot/:/tftpboot/netboot"
+    - "/srv/pxe/pxelinux.cfg/:/tftpboot/pxelinux.cfg/"
+    - "/srv/pxe/pub/:/var/ftp/pub/:ro"
+    - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+    - "/tmp/${mktemp -d}:/run"

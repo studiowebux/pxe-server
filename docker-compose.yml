@@ -17,4 +17,4 @@ services:
     - "/srv/pxe/pxelinux.cfg/:/tftpboot/pxelinux.cfg/"
     - "/srv/pxe/pub/:/var/ftp/pub/:ro"
     - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-    - "/tmp/${mktemp -d}:/run"
+    - "/tmp/.pxe-server:/run"

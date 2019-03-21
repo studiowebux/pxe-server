@@ -1,0 +1,9 @@
+default menu.c32
+prompt 0
+timeout 30
+MENU TITLE webuxlab
+
+LABEL centos76
+MENU LABEL CentOS 7.6
+	KERNEL /netboot/centos/76/vmlinuz
+	APPEND initrd=/netboot/centos/76/initrd.img inst.repo=ftp://192.168.10.5/pub/images/centos/76 ks=ftp://192.168.10.5/pub/kickstarts/centos/76/ks.cfg

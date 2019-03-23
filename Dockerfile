@@ -42,8 +42,6 @@ VOLUME [ "/tftpboot/netboot", "/tftpboot/pxelinux.cfg/", "/var/ftp/pub", "/sys/f
 
 EXPOSE 68/udp
 EXPOSE 68/tcp
-EXPOSE 67/udp
-EXPOSE 67/tcp
 EXPOSE 69/udp
 EXPOSE 4011/udp
 EXPOSE 21/tcp

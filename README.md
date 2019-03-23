@@ -30,9 +30,7 @@ You can start the image with this command:
 ```
 docker run -it --name pxe \
 -p 21:21 \
--p 67:67/udp \
 -p 68:68/udp \
--p 67:67 \
 -p 68:68 \
 -p 69:69/udp \
 -p 4011:4011/udp \
